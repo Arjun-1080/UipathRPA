@@ -64,7 +64,7 @@ function Board() {
   };
 
   return (
-    <div className='flex flex-col justify-center items-center scrollbar-hide overflow-y-auto'>
+    <div className='flex flex-col justify-center items-center scrollbar-hide'>
       <h1 className='p-[40px] mt-[20px] text-[40px] w-1/2 text-center font-source font-normal'>
         Meet the Team that Makes the 
         <span className='text-[45px] font-source-italic text-[--primary] font-light'> MAGIC </span> 
