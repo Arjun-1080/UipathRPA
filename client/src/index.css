@@ -1,0 +1,41 @@
+@import url('https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&family=Quicksand:wght@300..700&family=Source+Serif+4:ital,opsz,wght@0,8..60,200..900;1,8..60,200..900&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@font-face{
+  font-family: "source-serif";
+  src: local("SourceSerif4"),
+    url("/fonts/Source_Serif_4/static/SourceSerif4_18pt-Light.ttf") format("opentype");
+  font-weight: normal;
+}
+
+@font-face{
+  font-family: "source-serif-italic";
+  src: local("SourceSerif4"),
+    url("/fonts/Source_Serif_4/static/SourceSerif4_18pt-LightItalic.ttf") format("opentype");
+  font-weight: normal;
+}
+
+:root {
+  --primary : #FF3C00;
+  --secondary : #361800;
+  --ternary : #FFF7F1;
+  --border : #7A3500;
+  --source : source-serif;
+  --manrope : Manrope;
+  --source-italic :  source-serif-italic;
+  
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  
+}
+
+html , body{
+    background-color: var(--ternary);
+    font-family: var(--manrope);
+}
