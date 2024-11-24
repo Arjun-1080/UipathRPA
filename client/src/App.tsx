@@ -9,6 +9,8 @@ import Events from './pages/Events'
 import Board from './pages/Board'
 import Navbar from './components/Navbar'
 import Blogs from './pages/Blogs'
+import Footer from './components/Footer'
+import About from './pages/About'
 
 function App() {
   const [count, setCount] = useState(bod)
@@ -21,9 +23,9 @@ function App() {
           <Route path='/events' element={<Events/>}/>
           <Route path='/board' element={<Board/>}/>
           <Route path='/blogs' element={<Blogs/>}/>
-
-
+          <Route path='/about' element={<About/>}/>
         </Routes>
+      <Footer/>  
      </Router>
   )
 }

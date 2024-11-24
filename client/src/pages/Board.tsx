@@ -37,7 +37,7 @@ function Board() {
   const renderMembers = () => {
     if (activeCategory !== "View all") {
       return (
-        <div className='pt-10 gap-8 flex flex-wrap w-full justify-center'>
+        <div className='pt-10 gap-8 flex flex-wrap w-full justify-center '>
           {filteredData.map((val, idx) => (
             <BodCard key={idx} data={val} />
           ))}
@@ -45,10 +45,10 @@ function Board() {
       );
     }
 
-    // Render grouped members in "View all" mode
+   
     return (
       <div className='pt-10 w-full'>
-        {tags.slice(1).map((tag) => ( // Skip "View all" from tags
+        {tags.slice(1).map((tag) => (
           groupedByTag[tag] && (
             <div key={tag} className='mb-12'>
               <div className='flex flex-wrap gap-8 justify-center'>
@@ -64,17 +64,17 @@ function Board() {
   };
 
   return (
-    <div className='flex flex-col justify-center items-center scrollbar-hide'>
+    <div className={`flex flex-col justify-center items-center scrollbar-hide pb-16`}>
       <h1 className='p-[40px] mt-[20px] text-[40px] w-1/2 text-center font-source font-normal'>
         Meet the Team that Makes the 
         <span className='text-[45px] font-source-italic text-[--primary] font-light'> MAGIC </span> 
         Happen,
       </h1>
-      <div className='flex w-[80%] justify-evenly'>
+      <div className='flex w-[80%] justify-center gap-8'>
         {tags.map((val, idx) => (
           <div 
             key={idx} 
-            className={`px-2 py-1 h-fit w-fit rounded-md text-[14px] ${
+            className={`px-2 py-1 h-fit w-fit rounded-md text-[16px] ${
               activeCategory === val ? 'bg-white' : ''
             } hover:cursor-pointer`} 
             onClick={() => handleSwitch(val)}
@@ -83,7 +83,9 @@ function Board() {
           </div>
         ))}
       </div>
-      {renderMembers()}
+      <div className=''>
+            {renderMembers()}
+      </div>
     </div>
   )
 }
