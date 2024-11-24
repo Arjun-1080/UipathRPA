@@ -38,10 +38,10 @@
 html , body{
     background-color: var(--ternary);
     font-family: var(--manrope);
-    overflow-y: auto;
+    
 }
 
-.scrollbar-hide::-webkit-scrollbar {
+body::-webkit-scrollbar {
   display: none;
 }
 
